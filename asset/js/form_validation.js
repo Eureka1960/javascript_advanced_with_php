@@ -28,7 +28,7 @@ if (document.getElementById('student_form')) {
     //Listend to the gender change select
     document.getElementById('gender').addEventListener('change', function() {
         if (this.value == 'F' || this.value == 'M') {
-            document.getElementById('gender_error').innerText = '';
+            document.getElementById('gender_error').innerText = "";
         }
     });
 

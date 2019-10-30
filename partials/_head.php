@@ -12,23 +12,26 @@
 <body>
     <header>
     <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">E-MASOMO</a>
+        <a class="navbar-brand" id="nav_link_page" href="#/home">E-MASOMO</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" id="nav_link_page" href="#/home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.php">About</a>
+                    <a class="nav-link" id="nav_link_page" href="#/about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.php">Contact</a>
+                    <a class="nav-link" id="nav_link_page" href="#/contact">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a href="login.php" class="nav-link">Connexion</a>
+                    <a href="#/profile.php" class="nav-link id="nav_link_page"">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#/login" class="nav-link" id="nav_link_page">Connexion</a>
                 </li>
             </ul>
         </div>

@@ -1,4 +1,5 @@
 if (document.getElementById('student_form')) {
+    const validated = false;
     //Prevent the default form behavior
     document.getElementById('student_form').addEventListener('submit', e => {
         e.preventDefault();
@@ -11,14 +12,14 @@ if (document.getElementById('student_form')) {
     function form_validation(student_form) {
         if (student_form == null) {
             //Make some code here
+            console.log('Make some codes here...');
         } else {
             let field_error_name = "";
             let field_name = "";
             for (let field of student_form) {
-                if (field['value'] == "") {
+                if (field['value'] == "" && field['type'] != 'submit') {
                     field_error_name = field['name'] + '_error';
                     field_name = field.getAttribute('data-field_name');
-                    console.log(field_error_name);
                     document.getElementById(field_error_name).innerHTML = `Le champs ${field_name} ne doit pas être vide.`;
                 }
             }
@@ -69,7 +70,6 @@ if (document.getElementById('student_form')) {
         } else {
             field_error = field_id + '_error';
             field_name = capitalize(field_name);
-            console.log(field_name);
             document.getElementById(field_error).setAttribute('class', 'text-success');
             document.getElementById(field_error).innerText = `${field_name} fournit est valide.`;
         }
@@ -99,7 +99,8 @@ if (document.getElementById('student_form')) {
             document.getElementById('password_error').setAttribute('class', 'text-danger');
             document.getElementById('password_error').innerHTML = `${field_name} n'est pas valide.`;
         }
-    })
+    });
+
 
     //Make the string capitalize
     function capitalize(str) {
@@ -116,5 +117,7 @@ if (document.getElementById('student_form')) {
         const reg = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
         return reg.test(String(input_password));
     }
+
+    //Check if the no error in validation form
 
 }

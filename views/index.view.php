@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col-6">
                 <h4>Register Form</h4>
-                <div id="show_notification" class="text-success"></div>
-                <form method="POST" id="student_form" autocomplete="off">
+                <div id="show_notification"></div>
+                <form method="POST" action="model/tables/Student.model.php" id="student_form" autocomplete="off">
                     <div class="form-group">
                         <label for="full_name">Nom complet</label>
                         <input type="text" name="full_name" id="full_name" data-field_name="nom complet" class="form-control ">
@@ -39,7 +39,7 @@
                     </div>
                     <div class="form-group ">
                         <label for="password ">Mot de passe</label>
-                        <input type="text " name="password" id="password" data-field_name="mot de passe" class="form-control ">
+                        <input type="password " name="password" id="password" data-field_name="mot de passe" class="form-control ">
                         <label>
                             <span><strong class="text-danger" id="password_error"></strong></span>
                         </label>
